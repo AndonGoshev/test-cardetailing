@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Корекция на лаковото покритие",
+    "description": "Професионална корекция на лака чрез пастиране и полиране с продукти от Gyeon, Car Pro и Optimum. Включва антихолограмна паста и запечатващ препарат.",
+    "price": 350,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-polirane.jpg"
+  },
+  {
+    "title": "Керамично покритие",
+    "description": "Дълготрайна защита на боята с керамично покритие от водещи производители. Защита от UV лъчи, химикали и механични повреди.",
+    "price": 800,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-vunshno2.jpg"
+  },
+  {
+    "title": "Пълен детайлинг интериор",
+    "description": "Цялостно почистване на интериора - седалки, табло, кори, кожени детайли. Включва безводно почистване на двигателя.",
+    "price": 250,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-kojen-salon.jpg"
+  },
+  {
+    "title": "Претапициране на таван",
+    "description": "Професионално претапициране на провиснал таван с оригинален немски плат или алкантара.",
+    "price": 400,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-vunshno1.jpg"
+  },
+  {
+    "title": "Възстановяване на джанти",
+    "description": "Професионално възстановяване и боядисване на алуминиеви джанти до заводски блясък.",
+    "price": 300,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-vunshno3.jpg"
+  },
+  {
+    "title": "Полиране на фарове",
+    "description": "Професионално полиране на фарове с опция за защита чрез сийлант, лакиране или защитно фолио.",
+    "price": 150,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-pastirane.jpg"
+  },
+  {
+    "title": "Премиум външно почистване",
+    "description": "Премахване на асфалт, птичи изпражнения, смоли и метални частици. Следвано от защита с вакса или сийлант.",
+    "price": 120,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-klimatik.jpg"
+  }
+]
