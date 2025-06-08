@@ -17,7 +17,7 @@ Hot Vision е модерен детайлинг център в Пловдив, 
 
 ```bash
 # Клониране на репозиторито
-git clone https://github.com/yourusername/hotvision.git
+git clone https://github.com/yourusername/test-cardetailing.git
 
 # Инсталиране на зависимостите
 npm install
@@ -29,7 +29,7 @@ npm start
 ## Структура на проекта
 
 ```
-hotvision/
+test-cardetailing/
 ├── src/
 │   ├── _includes/
 │   ├── _layouts/
