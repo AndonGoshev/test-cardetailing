@@ -3,8 +3,19 @@
 body {
   position: relative;
   background-color: black;
-background: #390906;
-background: radial-gradient(circle, rgba(87, 24, 20, 0.96) 0%, rgba(77, 13, 13, 0.95) 11%, rgba(28, 19, 17, 1) 31%, rgba(72, 71, 69, 1) 40%, rgba(84, 61, 61, 1) 53%, rgba(59, 55, 50, 1) 59%, rgba(28, 19, 17, 1) 86%);
+  background: #0a0d12;
+  background: #0a0d12;
+  background: #1a2332;
+  background: radial-gradient(circle,
+    rgba(80, 55, 30, 0.7) 0%,
+    rgba(65, 45, 25, 0.6) 15%,
+    rgba(50, 35, 20, 0.5) 25%,
+    rgba(45, 75, 120, 0.9) 35%,
+    rgba(35, 50, 85, 0.95) 50%,
+    rgba(25, 35, 60, 1) 65%,
+    rgba(15, 20, 35, 1) 80%,
+    rgba(8, 12, 20, 1) 100%
+  );
 }
 
 body::before {
@@ -14,8 +25,35 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
+  background-color: black;
   background: url('/hotvision/assets/images/background2.jpg') no-repeat center center / cover;
-  opacity: 0.3;
+  opacity: 0.7;
   z-index: -20;
   pointer-events: none;
 }
+
+main {
+  display: n
+}
+
+
+#about-images .img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+#about-images .img-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+#about-images .img {
+  position: relative;
+  z-index: 0;
+}
+

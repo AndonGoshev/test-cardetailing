@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            {% if title %}{{ title }} | {% endif %}SpeedWash - Луксозно автомивно в Пловдив</title>
-        <meta name="description" content="SpeedWash е луксозна автомивка в Пловдив, предлагаща висококачествени услуги за почистване на автомобили.">
+            {% if title %}{{ title }} | {% endif %}Hot Vision - Професионален детайлинг в Пловдив</title>
+        <meta name="description" content="Hot Vision е професионален детайлинг център в Пловдив, специализиран в луксозни детайлинг услуги за автомобили.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,13 +14,13 @@
         <link rel="stylesheet" href="{{ 'assets/css/custom-styles.css' | url }}">
 
         <!-- Open Graph meta tags -->
-        <meta property="og:title" content="Your Page Title"/>
-        <meta property="og:description" content="SpeedWash е луксозна автомивка в Пловдив, предлагаща висококачествени услуги за почистване на автомобили."/>
+        <meta property="og:title" content="Hot Vision - Професионален детайлинг в Пловдив"/>
+        <meta property="og:description" content="Hot Vision е професионален детайлинг център в Пловдив, специализиран в луксозни детайлинг услуги за автомобили."/>
         <meta property="og:image" content="https://andongoshev.github.io/hotvision/assets/images/socials-image.jpg"/>
         <meta property="og:url" content="https://example.com/your-page"/>
         <meta property="og:type" content="website"/>
 
-        <script src="https://cdn.tailwindcss.com"></script>
+        {# <script src="https://cdn.tailwindcss.com"></script> #}
 
         <script src="{{ 'assets/js/gsap.min.js' }}"></script>
 
@@ -33,8 +33,9 @@
         <header class="fixed w-full custom-container z-50  bg-gray-800">
             <nav class="max-w-90 mx-auto flex justify-between items-center h-20 ">
             <div class="flex items-center gap-5">
-                <a href="/" class="text-2xl font-bold text-luxury-white">
-                    <img class="max-h-[80%] max-w-[80px]" src="{{ 'assets/images/logo.png' | url }}" alt="Logo"/></a>
+                <a href="/" class="text-2xl font-bold text-luxury-white w-[50px] sm:w-[65px]">
+                    <img class="w-full " src="{{ 'assets/images/logo.png' | url }}" alt="Logo"/>
+                </a>
                 <div class="hidden md:flex md:items-center space-x-8">
                     <a href="/" class="hover:text-luxury-yellow transition-colors">Начало</a>
                     <a href="/uslugi" class="hover:text-luxury-yellow transition-colors">Услуги</a>
@@ -44,12 +45,15 @@
                 </div>
                 
             </div>
-            <a href="/rezervaciq" class="bg-luxury-yellow text-luxury-dark-gray font-semibold px-6 py-2 rounded-3xl hover:bg-yellow-600 transition-colors">Резервация</a>
-                <button class="md:hidden text-luxury-white">
+
+            <a href="/rezervaciq" class="hidden sm:inline-block bg-luxury-yellow text-luxury-dark-gray font-semibold px-6 py-2 rounded-3xl hover:bg-yellow-600 transition-colors">Резервация</a>
+                
+            <button class="md:hidden text-luxury-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
+                
             </nav>
         </header>
 
@@ -57,12 +61,12 @@
             {{ content | safe }}
         </main>
 
-        <footer class="bg-dark-gray mt-20">
+        <footer class="bg-gray-900 mt-20">
             <div class="max-w-90 mx-auto py-12 px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <div>
-                        <h3 class="text-xl font-bold mb-4">SpeedWash</h3>
-                        <p class="text-luxury-gray">Луксозно автомивно в Пловдив</p>
+                        <h3 class="text-xl font-bold mb-4">Hot Vision</h3>
+                        <p class="text-luxury-gray">Най-добрият детайлинг в Пловдив</p>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold mb-4">Контакти</h3>

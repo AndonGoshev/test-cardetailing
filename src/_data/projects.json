@@ -5,7 +5,7 @@
         "carModel": "S-Класа",
         "service": "Корекция на лака и керамично покритие",
         "images": [
-            "/assets/images/projects/mercedes.jpg",
+            "/assets/images/projects/mercedes-s.jpg",
             "{{ '/assets/images/projects/mercedes-s-2.jpg' | url }}",
             "{{ '/assets/images/projects/mercedes-s-3.jpg' | url }}",
             "{{ '/assets/images/projects/mercedes-s-4.jpg' | url }}"

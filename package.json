@@ -1,7 +1,7 @@
 {
-  "name": "speedwash",
+  "name": "hotvision",
   "version": "1.0.0",
-  "description": "Луксозно автомивно в Пловдив",
+  "description": "Hot Vision - Професионален детайлинг център в Пловдив",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
@@ -11,10 +11,11 @@
      "deploy": "echo 'Use GitHub Actions instead'"
   },
   "keywords": [
-    "car wash",
-    "luxury",
-    "plovdiv",
-    "bulgaria"
+    "detailing",
+    "auto detailing",
+    "car detailing",
+    "luxury detailing",
+    "professional detailing"
   ],
   "author": "",
   "license": "ISC",

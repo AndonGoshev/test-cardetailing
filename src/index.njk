@@ -4,86 +4,130 @@ title: Начало
 ---
 
 <!-- Hero Section -->
-<section class="relative mt-4 container-custom h-screen flex items-center justify-center rounded-[25px] overflow-hidden border-2 border-gray-900 shadow-xl">
-    <!-- Video: leave as-is (no pointer-events-none) -->
-    <video
-        class="absolute w-full h-full object-cover z-0"
-        autoplay
-        muted
-        loop
-        playsinline
-        webkit-playsinline
-        preload="auto"
-        data-wf-ignore="true"
-    >
-        <source src="{{ '/assets/video/hero-video.mp4' | url }}" type="video/mp4">
-    </video>
+<!-- Hero Section -->
+<section class="relative mt-10 container-custom flex flex-col gap-0 sm:gap-4 md:gap-10 md:flex-row items-center justify-between lg:justify-center rounded-[25px] overflow-hidden">
 
-    <!-- Gradient overlay: pointer-events-none so taps pass through -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 z-10 pointer-events-none"></div>
+    <!-- Right Image Container -->
+    <div class="lg:max-w-[50%] lg:max-h-screen md:order-2 w-[80%] sm:w-[60%] md:w-1/2 relative flex items-center justify-center">
+        <img 
+            src="{{ '/assets/images/hero-image.png' | url }}" 
+            alt="Професионален детайлинг"
+            class="w-full max-h-[50vh] lg:max-h-[70vh] object-contain object-center"
+/>
+    </div>
 
-    <!-- Text/button container: pointer-events-none -->
-    <div class="text-center relative z-20 pointer-events-none">
-        <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6">
-            Професионален детайлинг за вашия автомобил
-        </h1>
-        <p class="hero-subtitle text-xl md:text-2xl text-luxury-gray mb-8 max-w-2xl mx-auto">
-            Специализирани услуги с продукти от водещи световни марки
-        </p>
-        <!-- Re-enable pointer events on the link itself -->
-        <a
-          href="/rezervaciq"
-          class="btn-primary hero-button pointer-events-auto"
-        >
-          Резервирайте сега
-        </a>
+    <!-- Left Content -->
+    <div class="w-full md:w-1/2 py-8 md:py-12 z-20 text-center md:text-left">
+        <div class="space-y-6 flex flex-col items-center md:items-start">
+            <h1 class="hero-title text-2xl md:text-4xl font-bold">
+                Професионален детайлинг за вашия автомобил
+            </h1>
+            <p class="hero-subtitle text-xl md:text-2xl text-luxury-gray">
+                Специализирани услуги с продукти от водещи световни марки
+            </p>
+            <a href="/rezervaciq" class="btn-primary max-w-fit text-sm">
+                Резервирайте сега
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- Stats Section -->
+<section class="section-padding">
+    <div class="container-custom">
+        <div class="flex flex-col md:flex-row justify-evenly items-center gap-8">
+            <!-- Stat 1 -->
+            <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-luxury-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <span class="text-4xl font-bold text-white mb-2">10+</span>
+                <p class="text-luxury-gray">Години опит в детайлинг услугите</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-luxury-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                    </svg>
+                </div>
+                <span class="text-4xl font-bold text-white mb-2">500+</span>
+                <p class="text-luxury-gray">Доволни клиенти и автомобили</p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-luxury-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+                <span class="text-4xl font-bold text-white mb-2">100%</span>
+                <p class="text-luxury-gray">Качествени материали и грижа</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- About Section -->
-<section class="section-padding ">
+<section class="section-padding">
     <div class="container-custom">
         <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Images (Bento Style) -->
+            <div id="about-images" class="grid grid-cols-6 grid-rows-6 gap-2 sm:gap-4 h-[300px] sm:h-[500px] about-right">
+                <!-- Image 1 -->
+                <div class="img-box col-span-4 row-span-3 rounded-[15px] sm:rounded-[25px] border-2 border-gray-900" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);">
+                    <img
+            src="{{ 'assets/images/washed-car.jpg' | url }}"
+            alt="Професионален детайлинг"
+            class="img w-full h-full object-cover rounded-[15px] sm:rounded-[25px]"
+/>
+                </div>
 
-            <!-- Left Text -->
+                <!-- Image 2 -->
+                <div class="img-box col-span-2 row-span-2 rounded-[15px] sm:rounded-[25px] border-2 border-gray-900" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);">
+                    <img
+            src="{{ 'assets/images/coffee-house.jpg' | url }}"
+            alt="Нашето ателие"
+            class="img w-full h-full object-cover rounded-[15px] sm:rounded-[25px]"
+/>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="img-box col-span-3 row-span-3 rounded-[15px] sm:rounded-[25px] border-2 border-gray-900" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);">
+                    <img
+            src="{{ 'assets/images/bmw.jpg' | url }}"
+            alt="Детайлинг на интериор"
+            class="img w-full h-full object-cover rounded-[15px] sm:rounded-[25px]"
+/>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="img-box col-span-3 row-span-2 rounded-[15px] sm:rounded-[25px] border-2 border-gray-900" style="box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);">
+                    <img
+            src="{{ 'assets/images/porche.jpg' | url }}"
+            alt="Детайлинг инструменти"
+            class="img w-full h-full object-cover rounded-[15px] sm:rounded-[25px]"
+/>
+                </div>
+            </div>
+
+            <!-- Right Text -->
             <div class="space-y-6 about-left">
-                <h2 class="text-3xl md:text-4xl font-bold">За Hot Vision</h2>
+                <h2 class="text-3xl md:text-4xl font-bold">
+                    <span class="text-luxury-yellow">Hot Vision</span> – Вашият партньор в професионалния детайлинг
+                </h2>
                 <p class="text-luxury-gray text-lg">
-                    Hot Vision Detailing Center е специализирана в професионални детайлинг услуги за автомобили. Работим с продукти на най-добрите световно известни марки като Gyeon, Car Pro, Optimum, Angelwax, Scholl Concept Germani и NASIOL.
+                    Hot Vision Detailing Center е <span class="font-semibold text-white">специализирана в професионални детайлинг услуги</span> за автомобили. Работим с продукти на <span class="font-semibold text-white">най-добрите световно известни марки</span> като Gyeon, Car Pro, Optimum, Angelwax, Scholl Concept Germani и NASIOL.
                 </p>
                 <p class="text-luxury-gray text-lg">
-                    Нашите продукти са напълно щадящи боята и лака на автомобила, като в същото време осигуряват перфектно почистване и защита.
+                    Нашите продукти са <span class="font-semibold text-white">напълно щадящи боята и лака</span> на автомобила, като в същото време осигуряват <span class="font-semibold text-white">перфектно почистване и защита</span>.
                 </p>
 
                 <a href="/za-nas" class="btn-secondary">Научете повече</a>
-            </div>
-
-            <!-- Right Images (Bento) -->
-            <div class="flex gap-2.5 h-[400px] about-right">
-                <!-- Left Large Image -->
-                <img
-                    src="{{ 'assets/images/washed-car.jpg' | url }}"
-                    alt="Професионален детайлинг"
-                    class="w-1/2 h-full object-cover border-2 border-gray-900 rounded-l-[25px]"
-                    style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);"
-                />
-
-                <!-- Right Two Stacked Images -->
-                <div class="flex flex-col w-1/2 gap-2.5">
-                    <img
-                        src="{{ 'assets/images/coffee-house.jpg' | url }}"
-                        alt="Нашето ателие"
-                        class="h-[calc(50%-5px)] object-cover border-2 border-gray-900 rounded-tr-[25px]"
-                        style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);"
-                    />
-                    <img
-                        src="{{ 'assets/images/about-home.jpg' | url }}"
-                        alt="Професионални продукти"
-                        class="h-[calc(50%-5px)] object-cover border-2 border-gray-900 rounded-br-[25px]"
-                        style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);"
-                    />
-                </div>
-
             </div>
         </div>
     </div>
@@ -92,33 +136,63 @@ title: Начало
 <!-- Services Section -->
 <section class="section-padding relative">
     <div class="container-custom">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-white">Услуги</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Услуги</h2>
 
-        <!-- Optional scroll hint overlays -->
-        {# <div class="hidden md:block absolute left-0 top-28 bottom-0 w-10 bg-gradient-to-r from-luxury-black to-transparent z-10 pointer-events-none"></div>
-        <div class="hidden md:block absolute right-0 top-28 bottom-0 w-10 bg-gradient-to-l from-luxury-black to-transparent z-10 pointer-events-none"></div> #}
+        <!-- Services Grid Container -->
+        <div class="w-full">
+            <!-- Desktop: 2 rows x 3 columns, Tablet: 3 rows x 2 columns -->
+            <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for service in services.slice(0, 6) %}
+                    <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);" 
+                         class=" border-2 border-gray-900 service-card relative bg-gradient-to-br from-luxury-black to-black-900 p-6 rounded-[25px] flex flex-col items-center text-left">
 
-        <!-- Scrollable cards container -->
-        <div class="flex space-x-6 overflow-x-auto pb-6 custom-scrollbar relative z-20">
-            {% for service in services %}
-                <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);" class="border-2 border-gray-900 service-card relative bg-gradient-to-br min-w-[250px] md:min-w-[320px] from-luxury-black to-black-900 p-4 rounded-[25px] flex flex-col overflow-hidden">
+                        <!-- Rounded Square Image Container -->
+                        <div class="w-32 h-32 mb-6 rounded-[20%] overflow-hidden border-2 border-gray-900">
+                            <img 
+                                src="{{ service.image | url }}" 
+                                alt="{{ service.alt }}"
+                                class="w-full h-full object-cover"
+/>
+                        </div>
 
-                    <!-- Glow behind image -->
-                    <div class="absolute top-4 left-1/2 -translate-x-1/2 w-72 h-72 bg-gray-700 opacity-50 blur-2xl z-0"></div>
+                        <!-- Text Content -->
+                        <h3 class="w-full text-xl font-bold mb-4 text-white text-left">{{ service.title }}</h3>
+                        <p class="text-luxury-gray">{{ service.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
 
-                    <!-- Image -->
-                    <img src="{{ service.image | url }}" alt="{{ service.alt }}"
-           class="service-image w-[98%] mx-auto mt-1 h-48 object-cover rounded-[25px] mb-6 z-10 relative transition-transform duration-300 hover:scale-105 hover:rotate-1"/>
+            <!-- Mobile: Horizontal Scrolling -->
+            <div class="md:hidden overflow-x-auto">
+                <div class="flex gap-6 pb-4" style="width: max-content;">
+                    {% for service in services.slice(0, 6) %}
+                        <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); width: 280px; flex-shrink: 0;" 
+                             class="border-2 border-gray-900 service-card relative bg-gradient-to-br from-luxury-black to-black-900 p-6 rounded-[25px] flex flex-col items-center text-center">
 
-                    <!-- Text Content -->
-                    <h3 class="text-xl font-bold mb-4 text-white z-10 relative">{{ service.title }}</h3>
-                    <p class="text-luxury-gray mb-2 flex-grow z-10 relative">{{ service.description }}</p>
-                    <a href="{{ service.link }}"
-         class="btn-primary bg-luxury-yellow-500 w-full text-center mt-auto z-10 relative">Резервирай</a>
+                            <!-- Rounded Square Image Container -->
+                            <div class="w-32 h-32 mb-6 rounded-[20%] overflow-hidden border-2 border-gray-900">
+                                <img 
+                                    src="{{ service.image | url }}" 
+                                    alt="{{ service.alt }}"
+                                    class="w-full h-full object-cover"
+/>
+                            </div>
+
+                            <!-- Text Content -->
+                            <h3 class="text-xl font-bold mb-4 text-white">{{ service.title }}</h3>
+                            <p class="text-luxury-gray">{{ service.description }}</p>
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endfor %}
-        </div>
+            </div>
 
+            <!-- View All Services Button -->
+            <div class="text-center mt-8">
+                <a href="/uslugi" class="btn-primary bg-luxury-yellow-500 inline-block">
+                    Виж всички услуги
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -195,43 +269,77 @@ title: Начало
 </section>
 
 <!-- Testimonials Section -->
-<section class="home-testimonials section-padding ">
+<section class="home-testimonials section-padding">
     <div class="container-custom">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Отзиви от клиенти</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="flex flex-wrap -m-4">
             <!-- Testimonial 1 -->
-            <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);" class=" bg-gradient-to-br from-luxury-black to-luxury-black/80  p-8 rounded-[25px] border-2 border-gray-900">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-luxury-red rounded-full flex items-center justify-center text-xl font-bold">ИП</div>
-                    <div class="ml-4">
-                        <h4 class="font-bold">Иван Петров</h4>
-                        <p class="text-luxury-gray">Мерцедес S-класа</p>
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                <div class="h-full text-center bg-gray-100 p-8 rounded-[25px] border-2 border-gray-200">
+                    <img 
+                        src="{{ '/assets/images/male-profile.jpg' | url }}" 
+                        alt="Иван Петров"
+                        class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-luxury-yellow"
+/>
+                    <p class="leading-relaxed text-gray-800 text-lg mb-6">Професионален екип и отлични резултати! Всичко беше организирано и удобно. Определено препоръчвам!</p>
+
+                    <!-- Stars -->
+                    <div class="flex justify-center gap-1 mt-6 mb-4">
+                        {% for i in range(5) %}
+                            <svg class="w-5 h-5 text-luxury-yellow" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        {% endfor %}
                     </div>
+
+                    <h2 class="text-gray-900 font-bold title-font tracking-wider text-lg">Иван Петров</h2>
+                    <p class="text-gray-600">Мерцедес S-класа</p>
                 </div>
-                <p class="text-luxury-gray">Най-доброто автомивно в Пловдив! Професионален екип и перфектен резултат. Луксозната чакалня с кафе зона е чудесно допълнение.</p>
             </div>
 
-            <!-- Testimonial 2 -->
-            <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);" class=" bg-gradient-to-br from-luxury-black to-luxury-black/80  p-8 rounded-[25px] border-2 border-gray-900">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-luxury-red rounded-full flex items-center justify-center text-xl font-bold">МГ</div>
-                    <div class="ml-4">
-                        <h4 class="font-bold">Мария Георгиева</h4>
-                        <p class="text-luxury-gray">БМВ X5</p>
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                <div class="h-full text-center bg-gray-100 p-8 rounded-[25px] border-2 border-gray-200">
+                    <img 
+                        src="{{ '/assets/images/male-profile.jpg' | url }}" 
+                        alt="Иван Петров"
+                        class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-luxury-yellow"
+/>
+                    <p class="leading-relaxed text-gray-800 text-lg mb-6">Професионален екип и отлични резултати! Всичко беше организирано и удобно. Определено препоръчвам!</p>
+                    <!-- Stars -->
+                    <div class="flex justify-center gap-1 mt-6 mb-4">
+                        {% for i in range(5) %}
+                            <svg class="w-5 h-5 text-luxury-yellow" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        {% endfor %}
                     </div>
+
+                    <h2 class="text-gray-900 font-bold title-font tracking-wider text-lg">Иван Петров</h2>
+                    <p class="text-gray-600">Мерцедес S-класа</p>
                 </div>
-                <p class="text-luxury-gray">Впечатлена съм от вниманието към детайла и професионализма на екипа. Автомобилът ми никога не е изглеждал по-добре!</p>
             </div>
 
-            <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);" class=" bg-gradient-to-br from-luxury-black to-luxury-black/80  p-8 rounded-[25px] border-2 border-gray-900">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-luxury-red rounded-full flex items-center justify-center text-xl font-bold">МГ</div>
-                    <div class="ml-4">
-                        <h4 class="font-bold">Мария Георгиева</h4>
-                        <p class="text-luxury-gray">БМВ X5</p>
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                <div class="h-full text-center bg-gray-100 p-8 rounded-[25px] border-2 border-gray-200">
+                    <img 
+                        src="{{ '/assets/images/male-profile.jpg' | url }}" 
+                        alt="Иван Петров"
+                        class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-luxury-yellow"
+/>
+                    <p class="leading-relaxed text-gray-800 text-lg mb-6">Професионален екип и отлични резултати! Всичко беше организирано и удобно. Определено препоръчвам!</p>
+                    <!-- Stars -->
+                    <div class="flex justify-center gap-1 mt-6 mb-4">
+                        {% for i in range(5) %}
+                            <svg class="w-5 h-5 text-luxury-yellow" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        {% endfor %}
                     </div>
+
+                    <h2 class="text-gray-900 font-bold title-font tracking-wider text-lg">Иван Петров</h2>
+                    <p class="text-gray-600">Мерцедес S-класа</p>
                 </div>
-                <p class="text-luxury-gray">Впечатлена съм от вниманието към детайла и професионализма на екипа. Автомобилът ми никога не е изглеждал по-добре!</p>
             </div>
         </div>
     </div>
@@ -241,23 +349,51 @@ title: Начало
 <section class="section-padding">
     <div class="container-custom">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Често задавани въпроси</h2>
-        <div class="max-w-3xl mx-auto space-y-4">
+
+        <div class="max-w-full mx-auto space-y-4">
             <!-- FAQ Item 1 -->
-            <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);" class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-2xl border-2 border-gray-900">
-                <h3 class="text-xl font-bold mb-2">Колко време отнема една пълна услуга?</h3>
-                <p class="text-luxury-gray">Времето зависи от избраната услуга. Стандартното външно почистване отнема около 30-40 минути, докато пълният детайлинг може да отнеме 2-3 часа.</p>
+            <div class="faq-item">
+                <button class="w-full flex justify-between items-center p-6 bg-gradient-to-br from-luxury-black to-luxury-black/80 rounded-2xl border-2 border-gray-900 text-left" 
+                        onclick="toggleFAQ(this)"
+                        style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);">
+                    <h3 class="text-xl font-bold text-white">Колко време отнема една пълна услуга?</h3>
+                    <svg class="w-6 h-6 text-luxury-yellow transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden p-6 bg-gradient-to-br from-luxury-black/90 to-luxury-black/80 rounded-b-2xl border-x-2 border-b-2 border-gray-900">
+                    <p class="text-luxury-gray">Времето зависи от избраната услуга. Стандартното външно почистване отнема около 30-40 минути, докато пълният детайлинг може да отнеме 2-3 часа.</p>
+                </div>
             </div>
 
             <!-- FAQ Item 2 -->
-            <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);" class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-2xl border-2 border-gray-900">
-                <h3 class="text-xl font-bold mb-2">Трябва ли да резервирам час?</h3>
-                <p class="text-luxury-gray">Да, препоръчваме предварителна резервация, за да гарантираме най-добро обслужване и минимално време за чакане.</p>
+            <div class="faq-item">
+                <button class="w-full flex justify-between items-center p-6 bg-gradient-to-br from-luxury-black to-luxury-black/80 rounded-2xl border-2 border-gray-900 text-left" 
+                        onclick="toggleFAQ(this)"
+                        style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);">
+                    <h3 class="text-xl font-bold text-white">Трябва ли да резервирам час?</h3>
+                    <svg class="w-6 h-6 text-luxury-yellow transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden p-6 bg-gradient-to-br from-luxury-black/90 to-luxury-black/80 rounded-b-2xl border-x-2 border-b-2 border-gray-900">
+                    <p class="text-luxury-gray">Да, препоръчваме предварителна резервация, за да гарантираме най-добро обслужване и минимално време за чакане.</p>
+                </div>
             </div>
 
             <!-- FAQ Item 3 -->
-            <div style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);" class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-2xl border-2 border-gray-900">
-                <h3 class="text-xl font-bold mb-2">Какви методи за плащане приемате?</h3>
-                <p class="text-luxury-gray">Приемаме плащания в брой, с кредитни/дебитни карти и чрез банков превод.</p>
+            <div class="faq-item">
+                <button class="w-full flex justify-between items-center p-6 bg-gradient-to-br from-luxury-black to-luxury-black/80 rounded-2xl border-2 border-gray-900 text-left" 
+                        onclick="toggleFAQ(this)"
+                        style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);">
+                    <h3 class="text-xl font-bold text-white">Какви методи за плащане приемате?</h3>
+                    <svg class="w-6 h-6 text-luxury-yellow transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden p-6 bg-gradient-to-br from-luxury-black/90 to-luxury-black/80 rounded-b-2xl border-x-2 border-b-2 border-gray-900">
+                    <p class="text-luxury-gray">Приемаме плащания в брой, с кредитни/дебитни карти и чрез банков превод.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -265,17 +401,70 @@ title: Начало
 
 <!-- CTA Section -->
 <section class="section-padding relative">
-    <div class="absolute inset-0 opacity-10 z-10"></div>
+    <div class="container-custom">
+        <div class="bg-black p-10 py-28 relative overflow-hidden rounded-[25px] border-2 border-gray-900" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);">
+            <!-- Background Image (bottom layer) -->
+            {# <div class="opacity-20 absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ '/assets/images/cta-home.jpg' | url }}');"></div> #}
 
-    <div class="container-custom text-center relative z-20">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Готови ли сте за професионален детайлинг?</h2>
-        <p class="text-luxury-gray text-lg mb-8 max-w-2xl mx-auto">Резервирайте своя час днес и дайте на вашия автомобил заслужената професионална грижа с най-добрите продукти на пазара</p>
-        <div class="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="/rezervaciq" class="btn-primary">Резервирайте сега</a>
-            <a href="/kontakt" class="btn-secondary">Свържете се с нас</a>
+            <!-- Gradient Overlay (middle layer) -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-gray-700 to-gray-900 opacity-80"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-transparent opacity-10"></div>
+
+            <!-- Content (top layer) -->
+            <div class="relative z-20 flex flex-col md:flex-row items-center justify-between gap-8 text-center">
+                <!-- Left: Heading -->
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl md:text-4xl font-semibold text-white mb-4">
+                        Готови ли сте за професионален детайлинг?
+                    </h2>
+                </div>
+
+                <!-- Right: Text and Buttons -->
+                <div class="md:w-1/2 space-y-6">
+                    <p class="text-gray-200 text-lg text-center">
+                        Присъединете се към стотиците доволни клиенти, които избират Hot Vision за професионална грижа на своите автомобили.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center ">
+                        <a href="/rezervaciq" class="btn-primary">Резервирайте сега</a>
+                        <a href="/kontakt" class="btn-secondary">Свържете се с нас</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<script>
+    function toggleFAQ(button) {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('svg');
+
+        // Toggle answer visibility
+        answer
+            .classList
+            .toggle('hidden');
+
+        // Rotate icon
+        icon
+            .classList
+            .toggle('rotate-180');
+
+        // Optional: Close other FAQs
+        const allFaqs = document.querySelectorAll('.faq-item');
+        allFaqs.forEach(faq => {
+            if (faq !== button.parentElement) {
+                const otherAnswer = faq.querySelector('.faq-answer');
+                const otherIcon = faq.querySelector('svg');
+                otherAnswer
+                    .classList
+                    .add('hidden');
+                otherIcon
+                    .classList
+                    .remove('rotate-180');
+            }
+        });
+    }
+</script>
 
 <script src="{{ '/assets/js/home-gallery.js' | url }}" defer></script>
 <script src="{{ '/assets/js/home-animations.js' | url }}" defer></script>
